@@ -24,10 +24,9 @@ include 'fonctions.php';
                 $req = 'SELECT DISTINCT CODE_TDF FROM tdf_coureur order by CODE_TDF asc';
                 $cur = ExecuterRequete($conn, $req);
                 ?>
-
-                Nom : <input type="text" name="NOM" size="12" placeholder="Nom"><br>
-                Prenom : <input type="text" name="PRENOM" size="12" placeholder="Prénom"><br>
-                Numéro de coureur : <input type="text" name="N_COUREUR" size="12" placeholder="Numéro de coureur"><br>
+                Nom : <input type="text" name="NOM" size="12" placeholder="<?php verif_rempli("NOM"); ?>"><br>
+                Prenom : <input type="text" name="PRENOM" size="12" placeholder="<?php verif_rempli("PRENOM"); ?>"><br>
+                Numéro de coureur : <input type="text" name="numero" size="12" placeholder="<?php verif_rempli("numero"); ?>"><br>
                 Année de naissance : <?php annee_naissance(); ?> <br>
                 Année de participation : <?php annee_participation(); ?> <br>
                 Code Nationalité : <select name="CODE_TDF" size="1">
