@@ -22,6 +22,22 @@ function annee_naissance() {
     echo '</select>', "\n";
 }
 
+// fonction du prof permettant la conservation des données après soumission du formulaire
+
+  function verif_rempli($n)
+  {  
+    if (isset($_POST[$n]))
+    {
+		$var = $_POST[$n];
+		if ($var <> "")
+		echo $var; 
+		else
+			echo $n ," ?";
+	}
+	else 
+	  echo $n ," ?";
+  }
+
 //______________________________________________________________________________
 //_____________________FONCTIONS_BDD____________________________________________
 //______________________________________________________________________________
